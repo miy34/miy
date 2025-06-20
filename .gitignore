@@ -2,3 +2,4 @@
 .direnv
 Cargo.lock
 .bacon-locations
+.envrc

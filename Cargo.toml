@@ -1,5 +1,7 @@
 [workspace]
-members = [ 
+members = [
+    "crates/miy",
+    "crates/miy-opengl",
 ]
 resolver = "2"
 
@@ -20,3 +22,23 @@ std_instead_of_alloc = "warn"
 std_instead_of_core = "warn"
 
 [workspace.dependencies]
+miy.path = "crates/miy"
+miy-opengl.path="crates/miy-opengl"
+
+# util
+cfg-if = "1.0.0"
+
+#loggin%
+env_logger = { version = "0.11.8", default-features = false }
+log = { version = "0.4.27", default-features = false }
+
+# platform 
+raw-window-handle = "0.6.2"
+winit = { version = "0.30.9", default-features = false }
+glfw = { version = "0.59", default-features = true }
+
+# renderer
+glutin = "0.32.3" # OpenGL context
+wgpu = { version = "25.0.0", default-features = false }
+pollster = "0.4.0" # mostly for wgpu
+

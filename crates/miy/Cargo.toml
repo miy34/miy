@@ -1,0 +1,26 @@
+[package]
+name = "miy"
+version = "0.1.0"
+edition = "2024"
+description = "miy is a little framework I use for making my own games."
+repository = "https://github.com/3miy4/miy"
+license = "MIT OR Apache-2.0"
+categories = ["game-engines", "graphics", "rendering"]
+keywords = ["game", "engine", "graphics", "gamedev"]
+readme = "README.md"
+
+[dependencies]
+log.workspace = true
+miy-opengl = { workspace = true, features = ["context"] }
+
+[features]
+default = []
+
+[dev-dependencies]
+winit = { workspace = true, features = ["x11", "wayland", "rwh_06"] }
+glfw = { workspace = true, default-features=true, features = ["wayland"] }
+env_logger.workspace = true
+
+[lints]
+workspace = true
+

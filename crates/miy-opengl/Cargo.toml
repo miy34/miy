@@ -1,0 +1,22 @@
+[package]
+name = "miy-opengl"
+version = "0.1.0"
+edition = "2024"
+description = "OpenGL bindings and utility functions for miy"
+repository = "https://github.com/3miy4/miy"
+license = "MIT OR Apache-2.0"
+categories = ["game-engines", "graphics", "rendering"]
+keywords = ["game", "engine", "graphics", "gamedev", "opengl"]
+readme = "README.md"
+
+[dependencies]
+log.workspace = true
+glutin.workspace = true
+raw-window-handle = {workspace = true, optional = true }
+
+[features] 
+default = []
+context = ["dep:raw-window-handle"]
+
+[lints]
+workspace = true

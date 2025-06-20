@@ -17,6 +17,11 @@ mkShell rec {
 
   buildInputs = [
     # required to build GLFW
+    ## GLFW Wayland
+    extra-cmake-modules
+    wayland-scanner
+    wayland-protocols
+    ## GLFW X11
     xorg.libX11
     xorg.libXrandr
     xorg.libXinerama
@@ -45,6 +50,7 @@ mkShell rec {
     libxkbcommon
     wayland
     libGL
+    xorg.libX11
     vulkan-headers
     vulkan-loader
     vulkan-tools
