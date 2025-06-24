@@ -174,6 +174,7 @@ impl BufferUsage {
 #[repr(u32)]
 #[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub enum BufferBinding {
+    ZERO,
     ONE,
     TWO,
     THREE,
@@ -185,7 +186,6 @@ pub enum BufferBinding {
     NINE,
     TEN,
     ELEVEN,
-    TWELVE,
 }
 
 #[repr(transparent)]
