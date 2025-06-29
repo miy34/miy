@@ -190,6 +190,10 @@ pub enum BufferBinding {
 
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq, Debug)]
+pub struct UniformBlockIndex(u32);
+
+#[repr(transparent)]
+#[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub struct Shader(Uint);
 
 #[repr(transparent)]

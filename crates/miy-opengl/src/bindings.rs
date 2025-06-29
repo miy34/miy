@@ -162,6 +162,11 @@ gl!(
     get_shaderiv: fn(shader: gl::Shader, pname: gl::ShaderParameterName, params: *mut gl::Int),
     get_shader_info_log: fn(shader: gl::Shader, max_length: gl::Sizei, length: *mut gl::Sizei, info_log: *mut gl::Char),
 
+    // Uniforms
+    uniform_1i: fn(location: gl::Int, v0: gl::Int),
+    get_uniform_block_index: fn(program: gl::Program, uniform_block_name: *const gl::Char) -> gl::UniformBlockIndex,
+    uniform_block_binding: fn(program: gl::Program, uniform_block_index: gl::UniformBlockIndex, binding: gl::BufferBinding),
+
     //  ShaderProgram
     create_program: fn() -> gl::Program,
     attach_shader: fn(program: gl::Program, shader: gl::Shader),
@@ -187,7 +192,6 @@ gl!(
     ),
     generate_mipmap: fn(target: gl::TextureTarget),
     delete_textures: fn(n: gl::Sizei, texture: *const gl::Texture),
-    uniform_1i: fn(location: gl::Int, v0: gl::Int),
     //samplers
     gen_samplers: fn(n: gl::Sizei, samplers: *mut gl::Sampler),
     bind_samplers: fn(unit: gl::Uint, sampler: gl::Sampler),
