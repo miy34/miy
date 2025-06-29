@@ -12,6 +12,7 @@ readme = "README.md"
 [dependencies]
 log.workspace = true
 miy-math = { workspace = true }
+miy-color = { workspace = true }
 miy-opengl = { workspace = true, features = ["context"] }
 
 [features]

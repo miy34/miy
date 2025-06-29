@@ -1,0 +1,16 @@
+[package]
+name = "miy-color"
+version = "0.1.0"
+edition = "2024"
+description = "Color types and constants for the miy framework"
+repository = "https://github.com/3miy4/miy"
+license = "MIT OR Apache-2.0"
+categories = ["game-engines", "graphics", "rendering"]
+keywords = ["game", "engine", "graphics", "gamedev"]
+readme = "README.md"
+
+[lints]
+workspace = true
+
+[dependencies]
+
