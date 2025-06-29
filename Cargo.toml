@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "crates/miy",
+    "crates/miy-math",
     "crates/miy-opengl",
 ]
 resolver = "2"
@@ -24,6 +25,7 @@ std_instead_of_core = "warn"
 [workspace.dependencies]
 miy.path = "crates/miy"
 miy-opengl.path="crates/miy-opengl"
+miy-math.path="crates/miy-math"
 
 # util
 cfg-if = "1.0.0"
